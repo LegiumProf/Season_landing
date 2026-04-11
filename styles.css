@@ -521,6 +521,10 @@ button {
   color: #ffffff;
 }
 
+.visit__break {
+  display: block;
+}
+
 .menu-day {
   position: relative;
   width: 100%;
@@ -2226,6 +2230,30 @@ button {
     min-width: calc(50% - 12px);
   }
 
+  .how__card--third {
+    flex: 1 1 100%;
+    min-width: 100%;
+    min-height: 320px;
+    aspect-ratio: auto;
+    background-position: center center;
+  }
+
+  .how__card--third .how__content {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: none;
+    padding: 64px 32px 32px;
+    background: linear-gradient(90deg, #526e3e 0%, rgba(82, 110, 62, 0.96) 38%, rgba(82, 110, 62, 0.12) 100%);
+  }
+
+  .how__card--third .how__content p {
+    max-width: 34rem;
+  }
+
   .visit {
     min-height: 0;
   }
@@ -2325,13 +2353,19 @@ button {
     text-align: center;
   }
 
+  .menu-day__left {
+    align-self: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
+
   .menu-day__title-row {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .menu-day__title-row h2 {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .menu-day__description {
@@ -2343,8 +2377,9 @@ button {
   }
 
   .menu-day__center img {
-    width: min(232px, 34vw);
-    height: auto;
+    width: auto;
+    height: clamp(300px, calc(231.82px + 21.31vw), 450px);
+    object-fit: contain;
   }
 
   .menu-day__right {
@@ -2377,9 +2412,34 @@ button {
     padding: 16px;
   }
 
+  .how__content {
+    padding: 64px 16px 16px;
+  }
+
+  .how__card--third {
+    min-height: 280px;
+  }
+
+  .how__card--third .how__content {
+    padding: 64px 16px 16px;
+    background: linear-gradient(90deg, #526e3e 0%, rgba(82, 110, 62, 0.96) 48%, rgba(82, 110, 62, 0.18) 100%);
+  }
+
+  .how__card--third .how__content p {
+    max-width: 26rem;
+  }
+
   .visit {
     margin: 0 16px;
     padding: 16px;
+  }
+
+  .visit__content p {
+    font-size: clamp(20px, calc(20px + (100vw - 320px) * 0.0268), 32px);
+  }
+
+  .visit__break {
+    display: none;
   }
 
   .menu-day {
@@ -2419,7 +2479,9 @@ button {
   }
 
   .menu-day__center img {
-    width: min(220px, 52vw);
+    width: auto;
+    height: clamp(300px, calc(231.82px + 21.31vw), 450px);
+    object-fit: contain;
   }
 
   .menu-day__actions {
@@ -2521,10 +2583,40 @@ button {
 
   .how__cards {
     flex-direction: column;
+    flex-wrap: nowrap;
   }
 
   .how__card {
+    flex: 0 0 auto;
+    width: 100%;
     min-width: 100%;
+    min-height: 240px;
+    aspect-ratio: auto;
+    background-position: center center;
+  }
+
+  .how__content {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 64px 16px 16px;
+    background: linear-gradient(90deg, #f88841 0%, rgba(248, 136, 65, 0.96) 48%, rgba(248, 136, 65, 0.18) 100%);
+  }
+
+  .how__card--second .how__content {
+    background: linear-gradient(90deg, #c7492c 0%, rgba(199, 73, 44, 0.96) 48%, rgba(199, 73, 44, 0.18) 100%);
+  }
+
+  .how__card--third .how__content {
+    background: linear-gradient(90deg, #526e3e 0%, rgba(82, 110, 62, 0.96) 48%, rgba(82, 110, 62, 0.18) 100%);
+  }
+
+  .how__content p {
+    max-width: 22rem;
   }
 
   .visit {
@@ -2705,8 +2797,9 @@ button {
   }
 
   .menu-day__center img {
-    width: min(200px, 62vw);
-    height: auto;
+    width: auto;
+    height: clamp(300px, calc(231.82px + 21.31vw), 450px);
+    object-fit: contain;
   }
 
   .menu-day__note {
@@ -2721,10 +2814,6 @@ button {
 
   .how__content {
     padding: 32px 20px 20px;
-  }
-
-  .visit__content p {
-    font-size: clamp(28px, 8vw, 40px);
   }
 
   .mood-slider__label {
@@ -2849,5 +2938,54 @@ button {
 @media (max-width: 680px) {
   .hero__badge {
     display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .how__cards {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .how__card {
+    flex: 0 0 auto;
+    width: 100%;
+    min-width: 100%;
+    min-height: 260px;
+    aspect-ratio: auto;
+    background-position: center center;
+  }
+
+  .how__content {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 64px 16px 16px;
+    background: linear-gradient(180deg, rgba(248, 136, 65, 0) 0%, rgba(248, 136, 65, 0.92) 62%, #f88841 100%);
+  }
+
+  .how__card--second .how__content {
+    background: linear-gradient(180deg, rgba(199, 73, 44, 0) 0%, rgba(199, 73, 44, 0.92) 62%, #c7492c 100%);
+  }
+
+  .how__card--third .how__content {
+    background: linear-gradient(180deg, rgba(82, 110, 62, 0) 0%, rgba(82, 110, 62, 0.92) 62%, #526e3e 100%);
+  }
+
+  .how__card:not(.how__card--third) {
+    background-position: 28% center;
+  }
+
+  .how__content h3 {
+    font-size: 24px;
+  }
+
+  .how__content p {
+    max-width: 22rem;
+    font-size: 14px;
   }
 }
