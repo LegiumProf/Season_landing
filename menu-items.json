@@ -1,0 +1,242 @@
+[
+  {
+    "id": "latte",
+    "category": "classic",
+    "title": "Латте",
+    "price": "285₽",
+    "description": "Мягкий эспрессо с молоком и лёгкой пеной.",
+    "image": "latte.png"
+  },
+  {
+    "id": "cappuccino",
+    "category": "classic",
+    "title": "Капучино",
+    "price": "290₽",
+    "description": "Плотная молочная текстура и яркий кофейный вкус.",
+    "image": "cappuccino.png"
+  },
+  {
+    "id": "flat-white",
+    "category": "classic",
+    "title": "Флэт уайт",
+    "price": "275₽",
+    "description": "Насыщенный двойной эспрессо и бархатное молоко.",
+    "image": "flat white.png"
+  },
+  {
+    "id": "americano",
+    "category": "classic",
+    "title": "Американо",
+    "price": "240₽",
+    "description": "Чистый вкус кофе без лишнего, на каждый день.",
+    "image": "americano.png"
+  },
+  {
+    "id": "salted-caramel-latte",
+    "category": "classic",
+    "title": "Латте с солёной карамелью",
+    "price": "325₽",
+    "description": "Сладость карамели, щепотка соли и мягкий сливочный финал.",
+    "image": "salted caramel latte.png"
+  },
+  {
+    "id": "raspberry-mocha",
+    "category": "classic",
+    "title": "Малиновый мокка",
+    "price": "375₽",
+    "description": "Шоколадная база, кофе и ягодная кислинка.",
+    "image": "raspberry mocha.png"
+  },
+  {
+    "id": "vanilla-raf",
+    "category": "classic",
+    "title": "Ванильный раф",
+    "price": "365₽",
+    "description": "Тёплый сливочный вкус с мягкой ванильной нотой.",
+    "image": "vanilla raf.png"
+  },
+  {
+    "id": "mocha",
+    "category": "classic",
+    "title": "Мокка",
+    "price": "365₽",
+    "description": "Кофе, шоколад и молоко в насыщенном десертном сочетании.",
+    "image": "mocha.png"
+  },
+  {
+    "id": "Solar Spritz Coffee",
+    "category": "seasonal",
+    "title": "Solar Spritz Coffee",
+    "price": "420₽",
+    "description": "Цитрусовый освежающий кофе с лёгким игристым настроением.",
+    "image": "Solar Spritz Coffee.png"
+  },
+  {
+    "id": "Iced coffee with passion fruit and salt",
+    "category": "seasonal",
+    "title": "Айс-кофе с маракуйей и солью",
+    "price": "520₽",
+    "description": "Яркий холодный кофе с тропической кислинкой и солёным акцентом.",
+    "image": "Iced coffee with passion fruit and salt.png"
+  },
+  {
+    "id": "Basil Coffee Lemonade",
+    "category": "seasonal",
+    "title": "Кофе-лимонад с базиликом",
+    "price": "450₽",
+    "description": "Свежий лимонадный микс с травяным ароматом базилика.",
+    "image": "Basil Coffee Lemonade.png"
+  },
+  {
+    "id": "Coffee with white chocolate and sage",
+    "category": "seasonal",
+    "title": "Кофе с белым шоколадом и шалфеем",
+    "price": "430₽",
+    "description": "Сливочный вкус с белым шоколадом и мягкой травяной нотой.",
+    "image": "Coffee with white chocolate and sage.png"
+  },
+  {
+    "id": "Grey raff with lavender",
+    "category": "seasonal",
+    "title": "Серый раф с лавандой",
+    "price": "480₽",
+    "description": "Спокойный раф с цветочным ароматом и мягкой сливочной базой.",
+    "image": "Grey raff with lavender.png"
+  },
+  {
+    "id": "Milk Fog",
+    "category": "seasonal",
+    "title": "Milk Fog",
+    "price": "470₽",
+    "description": "Нежный молочный напиток с воздушной текстурой и мягким вкусом.",
+    "image": "Milk Fog.png"
+  },
+  {
+    "id": "Rain Brew",
+    "category": "seasonal",
+    "title": "Rain Brew",
+    "price": "490₽",
+    "description": "Насыщенный сезонный кофе с глубоким вкусом и пряным шлейфом.",
+    "image": "Rain Brew.png"
+  },
+  {
+    "id": "Espresso with dark plum and chocolate",
+    "category": "seasonal",
+    "title": "Эспрессо с тёмной сливой и шоколадом",
+    "price": "450₽",
+    "description": "Плотный эспрессо с фруктовой глубиной и шоколадным послевкусием.",
+    "image": "Espresso with dark plum and chocolate.png"
+  },
+  {
+    "id": "Coffee with evaporated milk and toffee",
+    "category": "seasonal",
+    "title": "Кофе с топлёным молоком и ирисом",
+    "price": "440₽",
+    "description": "Тёплый сладкий профиль с нотами ириса и карамели.",
+    "image": "Coffee with evaporated milk and toffee.png"
+  },
+  {
+    "id": "Frozen Espresso Shot",
+    "category": "seasonal",
+    "title": "Frozen Espresso Shot",
+    "price": "460₽",
+    "description": "Холодный эспрессо-шот с ярким вкусом и освежающей подачей.",
+    "image": "Frozen Espresso Shot.png"
+  },
+  {
+    "id": "Coffee with mint and eucalyptus",
+    "category": "seasonal",
+    "title": "Кофе с мятой и эвкалиптом",
+    "price": "470₽",
+    "description": "Свежий ароматный напиток с холодящим травяным акцентом.",
+    "image": "Coffee with mint and eucalyptus.png"
+  },
+  {
+    "id": "Ginger coffee with pepper",
+    "category": "seasonal",
+    "title": "Имбирный кофе с перцем",
+    "price": "480₽",
+    "description": "Пряный бодрящий вкус с тёплым перечным послевкусием.",
+    "image": "Ginger coffee with pepper.png"
+  },
+  {
+    "id": "Hoji latte with ice",
+    "category": "non-coffee",
+    "title": "Ходзи латте со льдом",
+    "price": "395₽",
+    "description": "Обжаренный чайный вкус, молочная база и прохладная подача.",
+    "image": "Hoji latte with ice.png"
+  },
+  {
+    "id": "matcha latte",
+    "category": "non-coffee",
+    "title": "Матча латте",
+    "price": "295₽",
+    "description": "Нежный молочный напиток с деликатной травяной горчинкой.",
+    "image": "matcha latte.png"
+  },
+  {
+    "id": "cocoa",
+    "category": "non-coffee",
+    "title": "Какао",
+    "price": "325₽",
+    "description": "Густой шоколадный вкус и мягкая сливочная текстура.",
+    "image": "Cocoa.png"
+  },
+  {
+    "id": "babichino cocoa",
+    "category": "non-coffee",
+    "title": "Бабичино какао",
+    "price": "255₽",
+    "description": "Лёгкое какао с мягкой пеной и уютной сладостью.",
+    "image": "Babichino cocoa.png"
+  },
+  {
+    "id": "citrus juice",
+    "category": "non-coffee",
+    "title": "Цитрусовый сок",
+    "price": "305₽",
+    "description": "Свежий яркий микс с бодрым цитрусовым вкусом.",
+    "image": "Citrus juice.png"
+  },
+  {
+    "id": "chicory latte blackberry cookies",
+    "category": "non-coffee",
+    "title": "Цикорный латте с ежевичным печеньем",
+    "price": "395₽",
+    "description": "Нежный напиток без кофе с ягодно-десертным настроением.",
+    "image": "Chicory latte blackberry cookies.png"
+  },
+  {
+    "id": "A satisfying combo",
+    "category": "combo",
+    "title": "Сытное комбо",
+    "price": "385₽",
+    "description": "Сбалансированное сочетание напитка и перекуса на каждый день.",
+    "image": "A satisfying combo.png"
+  },
+  {
+    "id": "double combo",
+    "category": "combo",
+    "title": "Двойное комбо",
+    "price": "375₽",
+    "description": "Пара позиций, которые хорошо работают вместе.",
+    "image": "double combo.png"
+  },
+  {
+    "id": "triple combo",
+    "category": "combo",
+    "title": "Тройное комбо",
+    "price": "365₽",
+    "description": "Три позиции для долгого завтрака или перекуса в городе.",
+    "image": "triple combo.png"
+  },
+  {
+    "id": "a pair combo",
+    "category": "combo",
+    "title": "Комбо на двоих",
+    "price": "385₽",
+    "description": "Удобный набор, чтобы взять две позиции сразу.",
+    "image": "a pair combo.png"
+  }
+]

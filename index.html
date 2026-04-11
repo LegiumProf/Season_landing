@@ -1,0 +1,703 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сезон</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section
+        class="hero"
+        aria-label="Главный экран кофейни Сезон"
+      >
+        <div class="hero__grid">
+          <div class="hero__media" aria-hidden="true">
+            <img class="hero__background" src="./img/hero_background.png" alt="" />
+            <div class="hero__overlay"></div>
+          </div>
+
+          <header class="hero__nav">
+            <a class="hero__logo" href="/" aria-label="Сезон">
+              <span>Сезон</span>
+            </a>
+
+            <button
+              class="hero__nav-toggle"
+              type="button"
+              aria-label="Открыть меню"
+              aria-expanded="false"
+              aria-controls="hero-nav-menu"
+              data-hero-nav-toggle
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M3 7H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M3 12H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M3 17H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <span>Меню</span>
+            </button>
+
+            <nav class="hero__menu" id="hero-nav-menu" aria-label="Основная навигация" data-hero-nav-menu>
+              <button type="button" data-scroll-target="#about">Суть</button>
+              <button type="button" data-scroll-target="#menu">Напиток дня</button>
+              <button type="button" data-scroll-target="#seasons">Сезоны</button>
+              <button type="button" data-scroll-target="#catalog">Меню</button>
+              <button type="button" data-scroll-target=".interior">Фотогалерея</button>
+              <button type="button" data-scroll-target="#reviews">Отзывы</button>
+              <div class="hero__menu-actions" aria-label="Социальные сети">
+                <button type="button" class="hero__icon-button" aria-label="Telegram">
+                  <img src="./img/tg_icon.svg" alt="" width="24" height="24" aria-hidden="true" />
+                </button>
+                <button type="button" class="hero__icon-button" aria-label="ВКонтакте">
+                  <img src="./img/vk_icon.svg" alt="" width="24" height="24" aria-hidden="true" />
+                </button>
+              </div>
+            </nav>
+
+            <div class="hero__actions" aria-label="Быстрые действия">
+              <button type="button" class="hero__icon-button" aria-label="Контакты">
+                <img src="./img/tg_icon.svg" alt="" width="24" height="24" aria-hidden="true" />
+              </button>
+              <button type="button" class="hero__icon-button" aria-label="Локация">
+                <img src="./img/vk_icon.svg" alt="" width="24" height="24" aria-hidden="true" />
+              </button>
+            </div>
+          </header>
+
+          <p class="hero__poem">
+            Люблю грозу в&nbsp;начале мая,<br />
+            Когда весенний, первый гром,<br />
+            Как&nbsp;бы резвяся и&nbsp;играя,<br />
+            Грохочет в&nbsp;небе голубом.
+          </p>
+
+          <div class="hero__content">
+            <div class="hero__headline-group">
+              <span class="hero__badge hero__badge--drink">Напиток дня по погоде</span>
+              <img class="hero__eyebrow" src="./img/logo__hero.svg" alt="Сезон" />
+              <span class="hero__badge hero__badge--breakfast">Завтраки каждый день</span>
+              <h1>Кофейня, которая чувствует город</h1>
+              <span class="hero__badge hero__badge--roast">Свежая обжарка</span>
+            </div>
+            <p class="hero__description">
+              Каждый день — новый напиток, подобранный<br />
+              под погоду за окном. Классика всегда на месте.<br />
+              Но сегодня мы рекомендуем кое-что особенное.
+            </p>
+          </div>
+
+          <div class="hero__bottom-left">
+            <p class="hero__hours">Работаем ежедневно с 08:00 до 21:00</p>
+            <button class="hero__cta" type="button" data-scroll-target="#menu">
+              <span>Меню дня</span>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M18.0699 14.4297L11.9999 20.4997L5.92993 14.4297"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 3.5V20.33"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <p class="hero__tagline">Каждый день в городе разный. Кофе тоже.</p>
+        </div>
+      </section>
+
+      <section class="how" id="about" aria-label="Как это работает">
+        <div class="how__inner">
+          <div class="how__cards">
+            <article class="how__card" style="--how-bg: url('./img/how__1.png')">
+              <div class="how__content">
+                <h3>Смотрим в окно</h3>
+                <p>
+                  Каждое утро бариста проверяет прогноз и выбирает один из четырёх вкусовых
+                  режимов: свежий, пряный, согревающий или спокойный
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="how__card how__card--second"
+              style="--how-bg: url('./img/how__2.png')"
+            >
+              <div class="how__content">
+                <h3>Собираем вкус</h3>
+                <p>
+                  Напиток дня, десерт дня и сет завтрака — всё подобрано под настроение, которое приносит погода
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="how__card how__card--third"
+              style="--how-bg: url('./img/how__3.png')"
+            >
+              <div class="how__content">
+                <h3>Вы просто приходите</h3>
+                <p>
+                  Классическое меню работает всегда. Напиток дня — рекомендация, не ограничение. Не хотите эксперимент — берите любимый латте
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="visit" aria-label="Не нужно разбираться в кофе">
+        <div class="visit__media">
+          <video
+            class="visit__video"
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="./img/tumbnail 1.jpg"
+          >
+            <source src="./img/video 1.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="visit__content">
+          <p>Не нужно разбираться в кофе.</p>
+          <p>Нужно просто зайти</p>
+        </div>
+      </section>
+
+      <section class="menu-day" id="menu" aria-label="Меню дня">
+        <div class="menu-day__backgrounds" aria-hidden="true">
+          <div
+            class="menu-day__background-layer is-active"
+            data-menu-day-bg-current
+            style="background-image: url('./img/Cloudy/Cloudy_1_back.svg')"
+          ></div>
+          <div class="menu-day__background-layer" data-menu-day-bg-next></div>
+        </div>
+
+        <div class="menu-day__weather">
+          <img src="./img/icons/cloudy.svg" alt="" width="24" height="24" aria-hidden="true" />
+          <span>Сегодня в Санкт-Петебурге облачно, +11&deg;</span>
+        </div>
+
+        <div class="menu-day__layout" data-menu-day-stage>
+          <div class="menu-day__left">
+            <div class="menu-day__title-row">
+              <h2 class="menu-day__title" data-menu-day-title>
+                <span class="menu-day__title-line" data-menu-day-title-main>Серый раф</span>
+                <span class="menu-day__title-subrow">
+                  <span class="menu-day__title-line" data-menu-day-title-secondary>с лавандой</span>
+                  <span class="menu-day__volume" data-menu-day-volume>350мл</span>
+                </span>
+              </h2>
+            </div>
+            <p class="menu-day__description" data-menu-day-description>
+              Тихое пасмурное утро в стакане. Лёгкая лаванда успокаивает и замедляет.
+            </p>
+            <div class="menu-day__stats">
+              <div class="menu-day__stat">
+                <span class="menu-day__stat-value" data-menu-day-calories>256</span>
+                <span class="menu-day__stat-label">ккал</span>
+              </div>
+              <div class="menu-day__stat">
+                <span class="menu-day__stat-value" data-menu-day-fats>9,1 г</span>
+                <span class="menu-day__stat-label">жиры</span>
+              </div>
+              <div class="menu-day__stat">
+                <span class="menu-day__stat-value" data-menu-day-proteins>8,4 г</span>
+                <span class="menu-day__stat-label">белки</span>
+              </div>
+              <div class="menu-day__stat">
+                <span class="menu-day__stat-value" data-menu-day-carbs>33,2 г</span>
+                <span class="menu-day__stat-label">углеводы</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-day__center">
+            <img
+              class="menu-day__drink-image"
+              src="./img/Cloudy/Cloudy_1_transparent.png"
+              data-menu-day-image
+              alt=""
+              width="232"
+              height="469"
+              aria-hidden="true"
+            />
+          </div>
+
+          <div class="menu-day__right">
+            <div class="menu-day__sizes" data-menu-day-sizes>
+              <button class="menu-day__size-button is-active" type="button">0.3</button>
+              <button class="menu-day__size-button" type="button">0.4</button>
+            </div>
+            <p class="menu-day__note" data-menu-day-note>
+              Контрастный и&nbsp;бодрящий, как весеннее утро
+            </p>
+            <span class="menu-day__price" data-menu-day-price>445₽</span>
+          </div>
+        </div>
+        <div class="menu-day__actions">
+          <button class="menu-day__action menu-day__action--menu" type="button" data-scroll-target="#catalog">Посмотреть всё меню</button>
+          <button class="menu-day__action menu-day__action--nav" type="button" aria-label="Предыдущий напиток дня" data-menu-day-prev>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M15 19.92L8.48 13.4C7.71 12.63 7.71 11.37 8.48 10.6L15 4.07996" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="menu-day__action menu-day__action--nav" type="button" aria-label="Следующий напиток дня" data-menu-day-next>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M15 19.92L8.48 13.4C7.71 12.63 7.71 11.37 8.48 10.6L15 4.07996" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="moods" id="seasons" aria-label="Четыре настроения и четыре вкуса">
+        <h2 class="moods__title">Четыре настроение — четыре вкуса</h2>
+
+        <div class="moods__grid">
+          <article class="mood-card" style="--mood-bg: url('./img/Sun/Sun_backround.svg')">
+            <div class="mood-card__content">
+              <div class="mood-card__header">
+                <img src="./img/icons/sun.svg" alt="" width="24" height="24" aria-hidden="true" />
+                <h3>Солнечно</h3>
+              </div>
+              <p class="mood-card__description">Ледяное стекло в руке, цитрусы, лёгкость</p>
+            </div>
+
+            <div class="mood-slider" data-slider>
+              <button class="mood-slider__button mood-slider__button--prev" type="button" aria-label="Предыдущий напиток" data-slider-prev>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M15 19.92L8.48 13.4C7.71 12.63 7.71 11.37 8.48 10.6L15 4.07996" stroke="#171717" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+
+              <div class="mood-slider__viewport">
+                <figure class="mood-slide is-active">
+                  <img src="./img/Sun/Sun_1.png" alt="Solar Spritz Coffee" />
+                </figure>
+                <figure class="mood-slide">
+                  <img src="./img/Sun/Sun_2.png" alt="Айс кофе с маракуйей и солью" />
+                </figure>
+                <figure class="mood-slide">
+                  <img src="./img/Sun/Sun_3.png" alt="Кофе-лимонад с базиликом" />
+                </figure>
+              </div>
+
+              <button class="mood-slider__button mood-slider__button--next" type="button" aria-label="Следующий напиток" data-slider-next>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M15 19.92L8.48 13.4C7.71 12.63 7.71 11.37 8.48 10.6L15 4.07996" stroke="#171717" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+
+              <div class="mood-slider__footer">
+                <div class="mood-slider__dots" aria-hidden="true">
+                  <span class="mood-slider__dot is-active"></span>
+                  <span class="mood-slider__dot"></span>
+                  <span class="mood-slider__dot"></span>
+                </div>
+                <div class="mood-slider__label">Solar Spritz Coffee</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="mood-card" style="--mood-bg: url('./img/Cloudy/Cloudy_backround.svg')">
+            <div class="mood-card__content">
+              <div class="mood-card__header">
+                <img src="./img/icons/cloudy.svg" alt="" width="24" height="24" aria-hidden="true" />
+                <h3>Облачно</h3>
+              </div>
+              <p class="mood-card__description">Ровное настроение, спокойный день, всё хорошо</p>
+            </div>
+
+            <div class="mood-slider" data-slider>
+              <button class="mood-slider__button mood-slider__button--prev" type="button" aria-label="Предыдущий напиток" data-slider-prev>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M15 19.92L8.48 13.4C7.71 12.63 7.71 11.37 8.48 10.6L15 4.07996" stroke="#171717" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+
+              <div class="mood-slider__viewport">
+                <figure class="mood-slide is-active">
+                  <img src="./img/Cloudy/Cloudy_1.png" alt="Кофе с белым шоколадом и шалфеем" />
+                </figure>
+                <figure class="mood-slide">
+                  <img src="./img/Cloudy/Cloudy_2.png" alt="Серый раф с лавандой" />
+                </figure>
+                <figure class="mood-slide">
+                  <img src="./img/Cloudy/Cloudy_3.png" alt="Milk Fog" />
+                </figure>
+              </div>
+
+              <button class="mood-slider__button mood-slider__button--next" type="button" aria-label="Следующий напиток" data-slider-next>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M15 19.92L8.48 13.4C7.71 12.63 7.71 11.37 8.48 10.6L15 4.07996" stroke="#171717" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+
+              <div class="mood-slider__footer">
+                <div class="mood-slider__dots" aria-hidden="true">
+                  <span class="mood-slider__dot is-active"></span>
+                  <span class="mood-slider__dot"></span>
+                  <span class="mood-slider__dot"></span>
+                </div>
+                <div class="mood-slider__label">Кофе с белым шоколадом и шалфеем</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="mood-card" style="--mood-bg: url('./img/Rainy/Rainy_background.svg')">
+            <div class="mood-card__content">
+              <div class="mood-card__header">
+                <img src="./img/icons/cloud-drizzle.svg" alt="" width="24" height="24" aria-hidden="true" />
+                <h3>Дождливо</h3>
+              </div>
+              <p class="mood-card__description">Тёплые руки, запотевшие окна, пряности</p>
+            </div>
+
+            <div class="mood-slider" data-slider>
+              <button class="mood-slider__button mood-slider__button--prev" type="button" aria-label="Предыдущий напиток" data-slider-prev>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M15 19.92L8.48 13.4C7.71 12.63 7.71 11.37 8.48 10.6L15 4.07996" stroke="#171717" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+
+              <div class="mood-slider__viewport">
+                <figure class="mood-slide is-active">
+                  <img src="./img/Rainy/Rainy_1.png" alt="Rain Brew" />
+                </figure>
+                <figure class="mood-slide">
+                  <img src="./img/Rainy/Rainy_2.png" alt="Эспрессо с тёмной сливой и шоколадом" />
+                </figure>
+                <figure class="mood-slide">
+                  <img src="./img/Rainy/Rainy_3.png" alt="Кофе с топлёным молоком и ирисом" />
+                </figure>
+              </div>
+
+              <button class="mood-slider__button mood-slider__button--next" type="button" aria-label="Следующий напиток" data-slider-next>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M15 19.92L8.48 13.4C7.71 12.63 7.71 11.37 8.48 10.6L15 4.07996" stroke="#171717" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+
+              <div class="mood-slider__footer">
+                <div class="mood-slider__dots" aria-hidden="true">
+                  <span class="mood-slider__dot is-active"></span>
+                  <span class="mood-slider__dot"></span>
+                  <span class="mood-slider__dot"></span>
+                </div>
+                <div class="mood-slider__label">Rain Brew</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="mood-card" style="--mood-bg: url('./img/Snowy/snowy_background.svg')">
+            <div class="mood-card__content">
+              <div class="mood-card__header">
+                <img src="./img/icons/cloud-snow.svg" alt="" width="24" height="24" aria-hidden="true" />
+                <h3>Морозно</h3>
+              </div>
+              <p class="mood-card__description">Горячее в ладонях, щёки красные, выдох</p>
+            </div>
+
+            <div class="mood-slider" data-slider>
+              <button class="mood-slider__button mood-slider__button--prev" type="button" aria-label="Предыдущий напиток" data-slider-prev>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M15 19.92L8.48 13.4C7.71 12.63 7.71 11.37 8.48 10.6L15 4.07996" stroke="#171717" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+
+              <div class="mood-slider__viewport">
+                <figure class="mood-slide is-active">
+                  <img src="./img/Snowy/snowy_1.png" alt="Frozen Espresso Shot" />
+                </figure>
+                <figure class="mood-slide">
+                  <img src="./img/Snowy/Snowy_2.png" alt="Кофе с мятой и эвкалиптом" />
+                </figure>
+                <figure class="mood-slide">
+                  <img src="./img/Snowy/Snowy_3.png" alt="Имбирный кофе с перцем" />
+                </figure>
+              </div>
+
+              <button class="mood-slider__button mood-slider__button--next" type="button" aria-label="Следующий напиток" data-slider-next>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M15 19.92L8.48 13.4C7.71 12.63 7.71 11.37 8.48 10.6L15 4.07996" stroke="#171717" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+
+              <div class="mood-slider__footer">
+                <div class="mood-slider__dots" aria-hidden="true">
+                  <span class="mood-slider__dot is-active"></span>
+                  <span class="mood-slider__dot"></span>
+                  <span class="mood-slider__dot"></span>
+                </div>
+                <div class="mood-slider__label">Frozen Espresso Shot</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="menu-catalog" id="catalog" aria-label="Наше меню">
+        <div class="menu-catalog__inner">
+          <h2 class="menu-catalog__title">Наше меню</h2>
+
+          <div class="menu-catalog__tabs" role="tablist" aria-label="Категории меню">
+            <button
+              class="menu-catalog__tab is-active"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              data-menu-category="classic"
+            >
+              Классика
+            </button>
+            <button
+              class="menu-catalog__tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-menu-category="seasonal"
+            >
+              Сезонный
+            </button>
+            <button
+              class="menu-catalog__tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-menu-category="non-coffee"
+            >
+              Не кофе
+            </button>
+            <button
+              class="menu-catalog__tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-menu-category="combo"
+            >
+              Комбо
+            </button>
+          </div>
+
+          <div class="menu-catalog__grid" data-menu-grid aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="interior" aria-label="Место, в которое хочется в любую погоду">
+        <div class="interior__inner">
+          <h2 class="interior__title">Место, в которое хочется в любую погоду</h2>
+          <svg class="interior__clip-defs" width="0" height="0" aria-hidden="true" focusable="false">
+            <defs>
+              <clipPath id="interior-grid-clip" clipPathUnits="userSpaceOnUse"></clipPath>
+            </defs>
+          </svg>
+
+          <div class="interior__grid">
+            <div class="interior__video-layer" aria-hidden="true">
+              <video class="interior__video" autoplay muted loop playsinline preload="metadata">
+                <source src="./img/video 2.mp4" type="video/mp4" />
+              </video>
+            </div>
+
+            <article class="interior__card">
+              <img class="interior__image" src="./img/int/int1.png" alt="" loading="lazy" />
+            </article>
+            <article class="interior__card">
+              <img class="interior__image" src="./img/int/int 2.png" alt="" loading="lazy" />
+            </article>
+            <article class="interior__card">
+              <img class="interior__image" src="./img/int/int 3.png" alt="" loading="lazy" />
+            </article>
+            <article class="interior__card">
+              <img class="interior__image" src="./img/int/int1.png" alt="" loading="lazy" />
+            </article>
+            <article class="interior__card">
+              <img class="interior__image" src="./img/int/int 2.png" alt="" loading="lazy" />
+            </article>
+            <article class="interior__card">
+              <img class="interior__image" src="./img/int/int 3.png" alt="" loading="lazy" />
+            </article>
+            <article class="interior__card">
+              <img class="interior__image" src="./img/int/int1.png" alt="" loading="lazy" />
+            </article>
+            <article class="interior__card">
+              <img class="interior__image" src="./img/int/int 2.png" alt="" loading="lazy" />
+            </article>
+            <article class="interior__card">
+              <img class="interior__image" src="./img/int/int 3.png" alt="" loading="lazy" />
+            </article>
+            <article class="interior__card">
+              <img class="interior__image" src="./img/int/int1.png" alt="" loading="lazy" />
+            </article>
+            <article class="interior__card">
+              <img class="interior__image" src="./img/int/int 2.png" alt="" loading="lazy" />
+            </article>
+            <article class="interior__card">
+              <img class="interior__image" src="./img/int/int 3.png" alt="" loading="lazy" />
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="reviews" id="reviews" aria-label="Что говорят гости">
+        <div class="reviews__inner">
+          <h2 class="reviews__title">Что говорят гости</h2>
+          <p class="reviews__subtitle">Вы можете не верить нашим словам</p>
+
+          <div class="reviews__stage">
+            <button class="reviews__nav reviews__nav--prev" type="button" aria-label="Предыдущий отзыв" data-reviews-prev>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M15 19.92L8.48 13.4C7.71 12.63 7.71 11.37 8.48 10.6L15 4.07996" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <div class="reviews__cards" data-reviews-stage>
+              <article class="review-card review-card--side review-card--prev" data-review-prev aria-hidden="true"></article>
+              <article class="review-card review-card--main" data-review-current></article>
+              <article class="review-card review-card--side review-card--next" data-review-next aria-hidden="true"></article>
+            </div>
+
+            <button class="reviews__nav reviews__nav--next" type="button" aria-label="Следующий отзыв" data-reviews-next>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M15 19.92L8.48 13.4C7.71 12.63 7.71 11.37 8.48 10.6L15 4.07996" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <button class="reviews__cta" type="button">Смотреть все отзывы</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contacts" aria-label="Подвал сайта">
+      <div class="site-footer__inner">
+        <div class="site-footer__top">
+          <button class="site-footer__brand" type="button" data-scroll-target=".hero" aria-label="Сезон">Сезон</button>
+
+          <div class="site-footer__column">
+            <h2 class="site-footer__title">Посетителям</h2>
+            <nav class="site-footer__nav" aria-label="Навигация в подвале">
+              <button type="button" data-scroll-target="#about">Суть концепции</button>
+              <button type="button" data-scroll-target="#menu">Напиток дня</button>
+              <button type="button" data-scroll-target="#seasons">Четыре настроения</button>
+              <button type="button" data-scroll-target="#catalog">Меню</button>
+              <button type="button" data-scroll-target=".interior">Фотогалерея</button>
+              <button type="button" data-scroll-target="#reviews">Отзывы</button>
+            </nav>
+          </div>
+
+          <div class="site-footer__column">
+            <h2 class="site-footer__title">Режим работы</h2>
+            <p class="site-footer__time">08:00-21:00</p>
+            <p class="site-footer__text">ежедневно</p>
+          </div>
+
+          <div class="site-footer__column">
+            <h2 class="site-footer__title">Контакты</h2>
+            <a class="site-footer__email" href="mailto:mail@yandex.ru">MAIL@YANDEX.RU</a>
+            <div class="site-footer__socials" aria-label="Социальные сети">
+              <a class="site-footer__social" href="#" aria-label="ВКонтакте">
+                <img src="./img/vk_icon_color.svg" alt="" width="20" height="20" aria-hidden="true" />
+              </a>
+              <a class="site-footer__social" href="#" aria-label="Telegram">
+                <img src="./img/tg_icon_color.svg" alt="" width="20" height="20" aria-hidden="true" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="site-footer__middle">
+          <div class="site-footer__spacer" aria-hidden="true"></div>
+
+          <div class="site-footer__column site-footer__column--location">
+            <h2 class="site-footer__title">Где находимся</h2>
+            <p class="site-footer__text">г. Санкт-Петербург,<br />ул. Невский проспект, 24</p>
+          </div>
+
+          <div class="site-footer__map-wrap">
+            <div class="site-footer__map">
+              <script
+                type="text/javascript"
+                charset="utf-8"
+                async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af6f4fd25ec6e160209482d391a9006e1da79461a500e16fcafa09b0a9e453b21&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"
+              ></script>
+            </div>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <p class="site-footer__meta">© 2026, название</p>
+          <a class="site-footer__meta-link" href="#">Публичная оферта</a>
+          <a class="site-footer__meta-link" href="#">Политика конфиденциальности</a>
+          <a class="site-footer__meta-link" href="#">Разработка сайта</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="floating-nav-wrap" data-floating-nav-wrap>
+      <nav class="floating-nav-panel" id="floating-nav-panel" aria-label="Навигация по разделам" data-floating-nav-panel>
+        <button type="button" data-scroll-target="#about">Суть</button>
+        <button type="button" data-scroll-target="#menu">Напиток дня</button>
+        <button type="button" data-scroll-target="#seasons">Сезоны</button>
+        <button type="button" data-scroll-target="#catalog">Меню</button>
+        <button type="button" data-scroll-target=".interior">Фотогалерея</button>
+        <button type="button" data-scroll-target="#reviews">Отзывы</button>
+      </nav>
+
+      <div class="floating-nav" aria-label="Нижняя навигация" data-floating-nav>
+        <button class="floating-nav__brand" type="button" data-scroll-target=".hero" aria-label="Сезон">Сезон</button>
+        <button
+          class="floating-nav__menu"
+          type="button"
+          aria-label="Открыть меню навигации"
+          aria-expanded="false"
+          aria-controls="floating-nav-panel"
+          data-floating-nav-toggle
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3 7H21" stroke="#171717" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M3 12H21" stroke="#171717" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M3 17H21" stroke="#171717" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span>Меню</span>
+        </button>
+        <div class="floating-nav__socials" aria-label="Социальные сети">
+          <a class="floating-nav__social" href="#" aria-label="ВКонтакте">
+            <img src="./img/vk_icon_color.svg" alt="" width="20" height="20" aria-hidden="true" />
+          </a>
+          <a class="floating-nav__social" href="#" aria-label="Telegram">
+            <img src="./img/tg_icon_color.svg" alt="" width="20" height="20" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+[
+  {
+    "id": "grey-raf-lavender",
+    "title": "Серый раф",
+    "subtitle": "с лавандой",
+    "description": "Тихое пасмурное утро в стакане. Лёгкая лаванда успокаивает и помогает замедлиться.",
+    "note": "Контрастный и бодрящий, как весеннее утро",
+    "calories": "256",
+    "fats": "9,1 г",
+    "proteins": "8,4 г",
+    "carbs": "33,2 г",
+    "backgroundImage": "./img/Cloudy/Cloudy_1_back.svg",
+    "drinkImage": "./img/Cloudy/Cloudy_1_transparent.png",
+    "sizes": [
+      {
+        "label": "0.3",
+        "volume": "350мл",
+        "price": "445₽"
+      },
+      {
+        "label": "0.4",
+        "volume": "450мл",
+        "price": "495₽"
+      }
+    ]
+  },
+  {
+    "id": "white-chocolate-sage",
+    "title": "Кофе",
+    "subtitle": "с белым шоколадом и шалфеем",
+    "description": "Мягкий сливочный вкус с травяной свежестью и деликатной сладостью в послевкусии.",
+    "note": "Спокойный и обволакивающий, как свет после дождя",
+    "calories": "310",
+    "fats": "11,2 г",
+    "proteins": "7,9 г",
+    "carbs": "36,5 г",
+    "backgroundImage": "./img/Cloudy/Cloudy_2_back.svg",
+    "drinkImage": "./img/Cloudy/Cloudy_2_transparent.png",
+    "sizes": [
+      {
+        "label": "0.3",
+        "volume": "300мл",
+        "price": "455₽"
+      },
+      {
+        "label": "0.4",
+        "volume": "400мл",
+        "price": "510₽"
+      }
+    ]
+  },
+  {
+    "id": "dark-plum-espresso",
+    "title": "Эспрессо",
+    "subtitle": "с тёмной сливой и шоколадом",
+    "description": "Более плотный десертный вкус с фруктовой глубиной и тёплым шоколадным акцентом.",
+    "note": "Насыщенный и собранный, как вечерний город перед дождём",
+    "calories": "256",
+    "fats": "8,6 г",
+    "proteins": "6,8 г",
+    "carbs": "28,4 г",
+    "backgroundImage": "./img/Cloudy/Cloudy_3_back.svg",
+    "drinkImage": "./img/Cloudy/Cloudy_3_transparent.png",
+    "sizes": [
+      {
+        "label": "0.3",
+        "volume": "250мл",
+        "price": "430₽"
+      },
+      {
+        "label": "0.4",
+        "volume": "350мл",
+        "price": "480₽"
+      }
+    ]
+  }
+]
