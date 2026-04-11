@@ -407,7 +407,7 @@ button {
 }
 
 .how {
-  padding: 32px;
+  padding: 0 32px;
 }
 
 .how__inner {
@@ -610,7 +610,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0;
+  gap: 8px;
   font-family: "Racama", "Times New Roman", serif;
   font-size: 36px;
   font-weight: 400;
@@ -621,15 +621,8 @@ button {
   display: block;
 }
 
-.menu-day__title-subrow {
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 8px;
-}
-
 .menu-day__volume {
   display: inline-block;
-  transform: translateY(-8px);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
@@ -818,6 +811,7 @@ button {
 }
 
 .menu-day__action--nav {
+  flex: 0 0 48px;
   width: 48px;
   padding: 0;
 }
@@ -1210,12 +1204,16 @@ button {
 .menu-catalog__tabs {
   margin-top: 24px;
   display: flex;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   justify-content: center;
   gap: 24px;
   flex-wrap: wrap;
 }
 
 .menu-catalog__tab {
+  flex: 0 0 auto;
   min-height: 48px;
   padding: 0 16px;
   border: none;
@@ -1335,7 +1333,7 @@ button {
 }
 
 .interior__title {
-  margin: 0;
+  margin: 0 16px;
   text-align: center;
   font-family: "Racama", "Times New Roman", serif;
   font-size: 48px;
@@ -2409,7 +2407,7 @@ button {
   }
 
   .how {
-    padding: 16px;
+    padding: 0 16px;
   }
 
   .how__content {
@@ -2452,6 +2450,10 @@ button {
 
   .menu-catalog {
     padding: 64px 16px 80px;
+  }
+
+  .menu-catalog__grid {
+    gap: 16px;
   }
 
   .interior {
@@ -2504,10 +2506,6 @@ button {
 
   .hero__tagline {
     margin-top: 16px;
-  }
-
-  main {
-    gap: 16px;
   }
 
   .hero__grid {
@@ -2578,7 +2576,7 @@ button {
   }
 
   .how {
-    padding: 16px;
+    padding: 0 16px;
   }
 
   .how__cards {
@@ -2648,19 +2646,9 @@ button {
   }
 
   .menu-catalog__tabs {
-    justify-content: flex-start;
+    justify-content: center;
     gap: 12px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  .menu-catalog__tabs::-webkit-scrollbar {
-    display: none;
-  }
-
-  .menu-catalog__grid {
-    grid-template-columns: 1fr;
+    flex-wrap: wrap;
   }
 
   .interior {
@@ -2791,11 +2779,6 @@ button {
     font-size: 28px;
   }
 
-  .menu-day__title-subrow {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   .menu-day__center img {
     width: auto;
     height: clamp(300px, calc(231.82px + 21.31vw), 450px);
@@ -2808,6 +2791,11 @@ button {
 }
 
 @media (max-width: 560px) {
+  .interior__title {
+    font-size: clamp(24px, calc(13.33px + 3.33vw), 32px);
+    line-height: 1.05;
+  }
+
   .hero__eyebrow {
     letter-spacing: -0.04em;
   }
@@ -2821,7 +2809,7 @@ button {
   }
 
   .interior__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .review-card {
@@ -2942,6 +2930,22 @@ button {
 }
 
 @media (max-width: 640px) {
+  .menu-catalog__card {
+    border-radius: 24px;
+  }
+
+  .menu-catalog__content {
+    bottom: 16px;
+  }
+
+  .menu-catalog__item-title {
+    font-size: clamp(20px, calc(16px + 1.25vw), 24px);
+  }
+
+  .menu-catalog__price {
+    font-size: clamp(18px, calc(16px + 0.625vw), 20px);
+  }
+
   .how__cards {
     flex-direction: column;
     flex-wrap: nowrap;
@@ -2987,5 +2991,231 @@ button {
   .how__content p {
     max-width: 22rem;
     font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .menu-day {
+    padding: 56px var(--page-padding) 56px;
+  }
+
+  .menu-day__weather {
+    max-width: 100%;
+  }
+
+  .menu-day__layout {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .menu-day__left,
+  .menu-day__center,
+  .menu-day__right {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .menu-day__left {
+    align-self: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .menu-day__title-row {
+    justify-content: flex-start;
+  }
+
+  .menu-day__title-row h2 {
+    align-items: flex-start;
+    text-align: left;
+    font-size: 32px;
+  }
+
+  .menu-day__description {
+    width: 100%;
+    max-width: 32rem;
+  }
+
+  .menu-day__stats {
+    justify-content: flex-start;
+  }
+
+  .menu-day__center {
+    justify-content: center;
+    align-self: center;
+  }
+
+  .menu-day__drink-image {
+    width: auto;
+    height: 450px;
+    object-fit: contain;
+  }
+
+  .menu-day__right {
+    align-self: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    min-width: 0;
+  }
+
+  .menu-day__sizes {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .menu-day__note {
+    width: 100%;
+    max-width: 32rem;
+  }
+
+  .menu-day__actions {
+    margin-top: 48px;
+    gap: 16px;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-day {
+    padding: 48px 16px;
+  }
+
+  .menu-day__weather {
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .menu-day__layout {
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+  .menu-day__title-row h2 {
+    font-size: 28px;
+  }
+
+  .menu-day__volume,
+  .menu-day__description,
+  .menu-day__note,
+  .menu-day__price,
+  .menu-day__size-button,
+  .menu-day__action--menu {
+    font-size: 16px;
+  }
+
+  .menu-day__description,
+  .menu-day__note {
+    max-width: none;
+  }
+
+  .menu-day__stats {
+    gap: 12px;
+  }
+
+  .menu-day__stat {
+    flex: 0 1 auto;
+    padding: 12px 14px;
+  }
+
+  .menu-day__stat-value {
+    font-size: 18px;
+  }
+
+  .menu-day__drink-image {
+    height: 380px;
+  }
+
+  .menu-day__actions {
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 560px) {
+  .menu-day__stat {
+    min-width: 0;
+    text-align: left;
+  }
+
+  .menu-day__drink-image {
+    height: 340px;
+  }
+}
+
+@media (max-width: 460px) {
+  .menu-day {
+    padding: 40px 16px 48px;
+  }
+
+  .menu-day__weather {
+    flex-wrap: nowrap;
+  }
+
+  .menu-day__layout {
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .menu-day__title-row h2 {
+    font-size: 24px;
+    gap: 6px;
+  }
+
+  .menu-day__volume {
+    font-size: 14px;
+  }
+
+  .menu-day__description,
+  .menu-day__note {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .menu-day__stat {
+    padding: 10px 12px;
+  }
+
+  .menu-day__stat-value {
+    font-size: 16px;
+  }
+
+  .menu-day__stat-label {
+    font-size: 13px;
+  }
+
+  .menu-day__drink-image {
+    height: 300px;
+    object-fit: contain;
+  }
+
+  .menu-day__price {
+    font-size: 28px;
+  }
+
+  .menu-day__sizes {
+    width: 100%;
+  }
+
+  .menu-day__size-button {
+    flex: 1 1 calc(50% - 4px);
+    min-width: 0;
+  }
+
+  .menu-day__actions {
+    margin-top: 24px;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 460px) {
+  .interior {
+    margin: 0 16px;
+    padding: 32px 0 0;
   }
 }

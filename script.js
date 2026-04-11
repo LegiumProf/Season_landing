@@ -387,7 +387,6 @@ if (menuDay) {
   const currentBackground = menuDay.querySelector("[data-menu-day-bg-current]");
   const nextBackground = menuDay.querySelector("[data-menu-day-bg-next]");
   const titleMain = menuDay.querySelector("[data-menu-day-title-main]");
-  const titleSecondary = menuDay.querySelector("[data-menu-day-title-secondary]");
   const volume = menuDay.querySelector("[data-menu-day-volume]");
   const description = menuDay.querySelector("[data-menu-day-description]");
   const calories = menuDay.querySelector("[data-menu-day-calories]");
@@ -519,7 +518,6 @@ if (menuDay) {
     const selectedSize = item.sizes[safeSizeIndex] ?? item.sizes[0];
 
     titleMain.textContent = item.title;
-    titleSecondary.textContent = item.subtitle;
     description.textContent = item.description;
     calories.textContent = item.calories;
     fats.textContent = item.fats;
@@ -531,7 +529,7 @@ if (menuDay) {
 
     if (drinkImage) {
       drinkImage.src = item.drinkImage;
-      drinkImage.alt = `${item.title} ${item.subtitle}`.trim();
+      drinkImage.alt = item.title;
     }
 
     renderSizeButtons(item, safeSizeIndex);
