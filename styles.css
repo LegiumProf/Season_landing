@@ -1,9 +1,9 @@
 @font-face {
   font-family: "Racama";
   src:
-    url("/fonts/Racama.woff2") format("woff2"),
-    url("/fonts/Racama.woff") format("woff"),
-    url("/fonts/Racama.ttf") format("truetype");
+    url("./fonts/Racama.woff2") format("woff2"),
+    url("./fonts/Racama.woff") format("woff"),
+    url("./fonts/Racama.ttf") format("truetype");
   font-display: swap;
 }
 
