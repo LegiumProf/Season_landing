@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "MyFont";
+  src:
+    url("/fonts/MyFont.woff2") format("woff2"),
+    url("/fonts/MyFont.woff") format("woff"),
+    url("/fonts/MyFont.ttf") format("truetype");
+  font-display: swap;
+}
+
 :root {
   --page-padding: 32px;
   --accent: #e86a33;
